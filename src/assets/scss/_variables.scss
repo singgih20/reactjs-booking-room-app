@@ -5,7 +5,6 @@
 
 // Color system
 
-
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $grays: map-merge(
@@ -22,7 +21,6 @@ $grays: map-merge(
   ),
   $grays
 );
-
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -1056,7 +1054,7 @@ $breadcrumb-font-size: null !default;
 
 $breadcrumb-padding-y: 0.75rem !default;
 $breadcrumb-padding-x: 1rem !default;
-$breadcrumb-item-padding: 0.5rem !default;
+$breadcrumb-item-padding: 1rem !default;
 
 $breadcrumb-margin-bottom: 1rem !default;
 
