@@ -74,7 +74,6 @@ export default function Date(props) {
             />
           </div>
         )}
-        )}
       </div>
     </div>
   );

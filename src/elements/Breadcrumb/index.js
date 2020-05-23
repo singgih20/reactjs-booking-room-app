@@ -4,14 +4,14 @@ import propTypes from "prop-types";
 import Button from "elements/Button";
 import "./index.scss";
 export default function Breadcrumb(props) {
-  const { className } = props;
+  const className = [props.className];
   return (
     <div>
       <nav arial-label="breadcrumb">
-        <ol className={className.join(" ")}>
+        <div className={className.join(" ")}>
           {props.data.map((item, index) => {
             return (
-              <li
+              <span
                 key={`breadcrumb-${index}`}
                 className={`breadcrumb-item${
                   index === props.data.length - 1 ? " active" : ""
@@ -24,14 +24,15 @@ export default function Breadcrumb(props) {
                     {item.pageTitle}
                   </Button>
                 )}
-              </li>
+              </span>
             );
           })}
-        </ol>
+        </div>
       </nav>
     </div>
   );
 }
+
 Breadcrumb.propTypes = {
   data: propTypes.array,
   className: propTypes.string,
